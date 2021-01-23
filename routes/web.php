@@ -34,3 +34,9 @@ Route::get('da-dr-increase-service')->name('da-dr-increase-service');
 Route::get('cart')->name('cart');
 
 Auth::routes();
+
+Route::resource('users', App\Http\Controllers\UserController::class);
+
+Route::resource('categories', App\Http\Controllers\CategoryController::class);
+
+Route::resource('websites', App\Http\Controllers\WebsiteController::class);
