@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PublisherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,22 +23,52 @@ Route::get('home', function () {
     return view('home');
 });
 
+//PRINCIPAL ROUTES
+
 Route::get('sell-guest-posts', function() {
 	return view('pages.sellGuestPosts');
 })->name('sell-guest-posts');
 
-Route::get('marketplace')->name('marketplace');
+Route::get('marketplace', function() {
+	return view('pages.marketplace');
+})->name('marketplace');
 
-Route::get('guest-posting-services')->name('guest-posting-services');
+Route::get('guest-posting-services', function() {
+	return view('pages.guestPostingServices');
+})->name('guest-posting-services');
 
-Route::get('da-dr-increase-service')->name('da-dr-increase-service');
+Route::get('da-dr-increase-service', function() {
+	return view('pages.da-dr');
+})->name('da-dr-increase-service');
+
+//END PRINCIPAL ROUTES
 
 Route::get('cart')->name('cart');
 
-Auth::routes();
+Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 
-Route::resource('users', App\Http\Controllers\UserController::class);
+Route::get('faqs', function() {
+	return view('subpages.faqs');
+})->name('faqs');
+
+Route::get('term', function() {
+	return view('subpages.term');
+})->name('term');
+
+Route::get('privacy', function() {
+	return view('subpages.privacy');
+})->name('privacy');
+
+Route::get('refound-policy', function() {
+	return view('subpages.refoundPolicy');
+})->name('refound-policy');
+
+Route::get('publisher/websiteAdd', [PublisherController::class, 'websiteAdd'])->name('publisher.websiteAdd');
+
+Auth::routes();
 
 Route::resource('categories', App\Http\Controllers\CategoryController::class);
 
 Route::resource('websites', App\Http\Controllers\WebsiteController::class);
+
+Route::resource('carts', App\Http\Controllers\CartController::class);

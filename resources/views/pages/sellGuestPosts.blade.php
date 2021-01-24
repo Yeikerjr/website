@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
-<link rel="stylesheet" href="css/sgp.css">
+<link rel="stylesheet" href="{{ asset('css/sgp.css') }}">
 
 @endsection('custom_css')
 
@@ -51,12 +51,12 @@
                 </p>
             </div>
         </div>
-        <div class="btn" style="cursor: pointer;">
+        <a class="btn" href="{{ route('publisher.websiteAdd') }}" style="cursor: pointer;">
             <div class="btnIcon" style="cursor: pointer;">
                 <i class="fas fa-plus"></i>
             </div>
             Submit Your Website
-        </div>
+        </a>
     </main>
     <div class="promotionSeo">
         <img src="{{ asset('img/seo.svg') }}" alt="SEO" class="logo">
@@ -368,5 +368,3 @@
             <livewire:form-register />
         </div>
     </div>
-
-@endsection('custom_js')

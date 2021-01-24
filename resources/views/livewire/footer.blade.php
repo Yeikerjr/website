@@ -1,10 +1,10 @@
 <footer class="footer">
     <div class="firtSection">
             <div class="footer__links">
-                <a class="linksF" href="/marketplace">Buy gues posts</a>
-                <a class="linksF" href="/sellGuestPost">Sell gues post</a>
-                <a class="linksF" href="/marketplace">Marketplace</a>
-                <a class="linksF" href="/contact">Contact</a>
+                <a class="linksF" href="{{ route('marketplace') }}">Buy gues posts</a>
+                <a class="linksF" href="{{ route('sell-guest-posts') }}">Sell gues post</a>
+                <a class="linksF" href="{{ route('marketplace') }}">Marketplace</a>
+                <a class="linksF" href="{{ route('contact.index') }}">Contact</a>
             </div>
             <hr class="fS">
             <div class="footer__description">
@@ -20,10 +20,10 @@
     <div class="secondSection">
             &copy; 2020 BuySellGuestPost.com
             <div class="secondSectionLink">
-                <a class="sSecLink" href="/faqs">FAQs</a>
-                <a class="sSecLink" href="/term">Terms</a>
-                <a class="sSecLink" href="/privacy">Privacy</a>
-                <a class="sSecLink" href="/refunds">Refunds</a>
+                <a class="sSecLink" href="{{ route('faqs') }}">FAQs</a>
+                <a class="sSecLink" href="{{ route('term') }}">Terms</a>
+                <a class="sSecLink" href="{{ route('privacy') }}">Privacy</a>
+                <a class="sSecLink" href="{{ route('refound-policy') }}">Refunds</a>
             </div>
     </div>
 </footer>

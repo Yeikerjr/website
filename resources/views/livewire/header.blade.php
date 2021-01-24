@@ -27,7 +27,7 @@
             </div>
             <div class="nav__cardAndLogin">
                 <!--<ul class="nav__cardAndLogin--ul">-->
-                    <ul style="display: flex">
+                    <ul style="display: flex; align-items: center;">
                     <!--<a class="cart" href="{{ route('cart') }}">-->
                         <li class="navbar"><i class="fas fa-cart-plus cart"></i><a class="navbar__link" href="{{ route('cart') }}" style="border-right: 1px solid #123147;">0 item</a></li>
                     <!--</a>-->
